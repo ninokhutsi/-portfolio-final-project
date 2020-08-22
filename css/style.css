@@ -61,7 +61,7 @@ header{
     transition-property: all;
     transition-delay: 0.2s;
 }
-.button:hover{
+.button:focus{
     margin-top: 25px;
     margin-bottom: 5px;
     background-color:#D70028;
@@ -338,4 +338,141 @@ h1{
 }
 .fb-lg{
     width: 35px;
+}
+
+.main-icons{
+    display: none;
+}
+
+@media (min-width:1024px){
+    body{
+        padding: 0;
+    }
+    .header{
+        padding: 2%;
+        display: inline-block;
+        width: 60%;
+        position: fixed;
+        padding-bottom: 50px;
+    }
+    .header nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .header nav ul li a{
+        color: white;
+        font-size: 30px;
+        font-family: 'Fira Sans', sans-serif;
+    }
+    .header nav ul li a:focus-within{
+        color: red;
+    }
+    /* .main-icons{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        position: fixed;
+        float: right;
+    }
+    .clear{
+        clear: both;
+    } */
+    .main {
+        padding: 5%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .name p{
+        font-size: 150px;
+        text-align: left;
+        display: block;
+    }
+    .button-wraper{
+        text-align: left;
+        margin-top: 280px;
+        margin-left: -690px;
+        animation-name: hireme;
+        animation-duration: 1s;
+    }
+    @keyframes hireme{
+        from{transform: translateX(-500px);}
+        to{transform: translateX(0px);}
+    }
+    .photo img{
+        width: 300px;
+        animation-name: photo;
+        animation-duration: 3s;
+    }
+    @keyframes photo{
+        from{transform: translateX(500px);}
+        to{transform: translateX(0);}
+    }
+    .name {
+        animation-name: name;
+        animation-duration: 3s;
+    }
+    @keyframes name{
+        from{transform: translateX(-300px);}
+        to{transform: translateX(0px);}
+    }
+    @keyframes khutso{
+        from{transform: translateX(-700px);}
+        to{transform: translateX(0);}
+    }
+
+    /* about */
+
+    
+    .about div p{
+        width: 70%;
+    }
+    
+    /* skills */
+
+   
+    .skills-1{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .both{
+        width: 400px;
+    }
+    
+   /* contact */
+    .email{
+        width:200px;
+        height: 50px;
+    }
+    textarea{
+        width: 600px;
+        height: 200px;
+    }
+    .forms{
+        margin-left: 27%;
+    }
+    .send-button{
+        width: 120px;
+        height: 50px;
+        margin-left: 270px;
+        
+    }
+
+    /* footer */
+
+    .footer-divider{
+        display: none;
+    }
+    .info{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .mail{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 }
