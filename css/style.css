@@ -1,14 +1,15 @@
 body{
-    padding: 2%;
+    padding: 0;
     background-color: black;
     width: 100%;
     font-family: 'Fira Sans', sans-serif;
     font-weight: lighter;
 }
-
+/* burger */
 header{
     display: none;
 }
+
 /* main page */
 .main-page .name{
     text-align: center;
@@ -182,11 +183,11 @@ header{
 .xp h1{
     font-family: 'Fira Sans', sans-serif;
     font-size: 60px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     color: white;
 }
 .number{
-    font-size:200px;
+    font-size:170px;
     font-family: 'Fira Sans', sans-serif;
     color: #D70028;
     margin-top: 30px;
@@ -200,10 +201,10 @@ header{
     to{transform: translateX(200px);}
 }
 .error{
-    font-size: 50px;
+    font-size: 40px;
 }
 .exp{
-    font-size: 50px;
+    font-size: 40px;
 }
 
 
@@ -349,11 +350,15 @@ h1{
         padding: 0;
     }
     .header{
+        background-color: black;
         padding: 2%;
         display: inline-block;
-        width: 60%;
+        width: 100%;
         position: fixed;
         padding-bottom: 50px;
+    }
+    .nav-links{
+        width: 60%;
     }
     .header nav ul{
         display: flex;
@@ -362,11 +367,14 @@ h1{
     }
     .header nav ul li a{
         color: white;
-        font-size: 30px;
+        font-size: 20px;
         font-family: 'Fira Sans', sans-serif;
     }
     .header nav ul li a:focus-within{
-        color: red;
+        color: #D70028;
+    }
+    .header nav ul li a:hover{
+        color:#D70028;
     }
     /* .main-icons{
         display: flex;
