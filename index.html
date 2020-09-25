@@ -48,7 +48,7 @@
         
         <div class="main">
             <div class="main-wraper">
-                <div class="name">
+                <div id="mainpage" class="name">
                     <p>nino</p>
                     <p>khutsiberidze</p>
                     <p>front-end developer / graphic designer</p>
@@ -138,28 +138,45 @@
     <!-- contact -->
 
     <div id="contact" class="divider"></div>
-    <section class="forms">
     <div  class="contact">
         <h1>contact</h1>
     </div>
-        <div class="firstline-form">
-            <div class="form-box">
-                <label for="email"></label>
-                <input class="email" type="email" name="email" id="email" placeholder="type your email..." required>
+    <section class="forms">
+    
+       <div class="contact-wraper">
+            <div class="form-wraper">
+                <div class="firstline-form">
+                    <div class="form-box">
+                        <label for="email"></label>
+                        <input class="email" type="email" name="email" id="email" placeholder="type your email..." required>
+                    </div>
+    
+                    <div class="form-box">
+                        <button class="send-button">
+                            <img class="send-icon" src="img/send.svg" alt="send">
+                        </button>
+                    </div>
+    
+                </div>
+    
+                <div>
+                    <label for="message"></label>
+                    <textarea name="message"  id="message" placeholder="text..."></textarea>
+                </div>
             </div>
+            <div class="info-incontact">
 
-            <div class="form-box">
-                <button class="send-button">
-                    <img class="send-icon" src="img/send.svg" alt="send">
-                </button>
-        </div>
-
-        </div>
-
-        <div>
-            <label for="message"></label>
-            <textarea name="message"  id="message" placeholder="text..."></textarea>
-        </div>
+                <div class="mail">
+                   <h6>Phone</h6>
+                   <a class="callto" href="callto:+995598008501">+995 598 008 501</a>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="mail">
+                   <h6>E-mail</h6>
+                   <a class="mailto" href="mailto:ninokhutsiberidze16b@geolab.edu.ge">ninokhutsiberidze16b@geolab.edu.ge</a>
+                </div>
+           </div>
+       </div>
 
     </section>
     <div class="divider"></div>
@@ -170,12 +187,21 @@
                 <h6>Phone</h6>
                 <a class="callto" href="callto:+995598008501">+995 598 008 501</a>
              </div>
-             <div class="footer-divider"></div>
+             
              <div class="mail">
                 <h6>E-mail</h6>
                 <a class="mailto" href="mailto:ninokhutsiberidze16b@geolab.edu.ge">ninokhutsiberidze16b@geolab.edu.ge</a>
              </div>
         </div>
+        
+        <a class="smoothScroll" href="#mainpage">
+            <div class="scroll-up">
+                 <img src="img/Group 25.svg" alt="icon">
+                <p>scroll up</p>
+                
+            </div>
+        </a>
+       
 
         <div class="social">
             <a href="https://www.facebook.com/mpinh" target="_blank">
@@ -195,7 +221,7 @@
     </footer>
 
 
-
+    
     <script
          src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
     </script>

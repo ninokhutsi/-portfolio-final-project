@@ -6,9 +6,35 @@ body{
     font-weight: lighter;
 }
 /* burger */
+
+
+/* menu */
+
+
+
+
 header{
     display: none;
 }
+.scroll-up p{
+    color: rgba(255, 255, 255, 0.459);
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+}
+.scroll-up{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.scroll-up img{
+    width: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+
+
 
 /* main page */
 .main-icons{
@@ -238,6 +264,7 @@ header{
     display: none;
 }
 .email{
+    margin-bottom:30px ;
     text-decoration: none;
     border: none;
     width: 130px;
@@ -311,24 +338,33 @@ h1{
 }
 .info{
     margin-top: -10px;
+    height: 150px;
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 100px;
 }
 .info h6{
     font-family: 'Fira Sans', sans-serif;
     font-size: 28px;
     color: white;
 }
-.info a{
+.info div a{
     font-family: 'Fira Sans', sans-serif;
     font-size:20px;
     color: rgba(255, 255, 255, 0.445);
-    margin-top: 15px;
+    
+
+}
+.info-incontact{
+    display: none;
 }
 
 /* footer social */
-
+.footer{
+    margin-top: -400px;
+}
 .social{
     margin-top: 100px;
     width: 100%;
@@ -363,7 +399,33 @@ h1{
     display: none;
 }
 
+
+
+
+
+
+
+
+/* responsive */
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width:1024px){
+
+    .scroll-up{
+        display: none;
+    }
+
+    
     body{
         width: 100%;
         padding: 0;
@@ -479,38 +541,120 @@ h1{
     .both{
         width: 400px;
     }
+
+    
     
    /* contact */
-    .email{
-        width:200px;
-        height: 50px;
-    }
-    textarea{
-        width: 600px;
-        height: 200px;
-    }
-    .forms{
-        text-align: center;
-    }
+   .forms{
+    width: 100%;
+    margin: 0;
     
+    
+}
+.submit{
+    display: none;
+}
+.contact{
+    text-align: center;
+}
+.email{
+    text-decoration: none;
+    border: none;
+    width: 130px;
+    height: 33px;
+    color: rgba(255, 255, 255, 0.459);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    background-color: #3D3D3D;
+    border-radius: 10px;
+    padding-left: 7px;
+}
+.form-box input{
+    height: 60px;
+    width: 300px;
+}
+.form-wraper{
+    align-self: center;
+}
+textarea{
+    
+    width: 500px;
+    height: 200px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 2%;
+    margin-top: 20px;
+    
+}
+.firstline-form{
+   width: 500px; 
    
-    .send-button{
-        width: 120px;
-        height: 50px;
-        margin-left: 270px;
-        
-    }
+}
+.send-button{
+    
+    width: 100px;
+    height: 60px;
+   
+}
+.send-icon{
+    margin-left: 5px;
+    margin-top: 2px;
+    width:25px;
+}
+.contact-wraper{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+h1{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 60px;
+    color: white;
+}
+.contact{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.info-incontact{
+    margin-top: -10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.info-incontact h6{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 28px;
+    color: white;
+    
+}
+.info-incontact{
+    height: 380px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.info-incontact a{
+    font-family: 'Fira Sans', sans-serif;
+    font-size:20px;
+    color: rgba(255, 255, 255, 0.445);
+    margin-top: 15px;
+}
+.info{
+    display: none;
+}
 
     /* footer */
 
     .footer-divider{
         display: none;
     }
-    .info{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-    }
+    
+    
     .mail{
         display: flex;
         justify-content: space-around;
