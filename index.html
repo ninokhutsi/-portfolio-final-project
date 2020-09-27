@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="img">
@@ -13,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header style="z-index: 9999;" class="header">
         <nav>
             <ul class="nav-links">
                 <li><a class="smoothScroll" href="index.html">main</a></li>
@@ -46,8 +49,9 @@
     
     <section class="main-page">
         
-        <div class="main">
-            <div class="main-wraper">
+        <div data-aos="zoom-in" style="transition: 2s;"
+         class="main">
+            <div  class="main-wraper">
                 <div id="mainpage" class="name">
                     <p>nino</p>
                     <p>khutsiberidze</p>
@@ -61,7 +65,8 @@
                 </div>
            </div>
 
-            <div class="photo">
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="photo">
                 <img src="img/12.svg" alt="image">
             </div>
 
@@ -71,9 +76,9 @@
     </section>
 
     <!-- about -->
-    <div id="about" class="divider"></div>
+    <div  id="about" class="divider"></div>
     <section class="about">
-        <div>
+        <div data-aos="fade-up" style="transition: 3s;">
             <h1>about</h1>
              <p> <span>Hello! I'm Nino</span></p>
             <p>I'm junior front-end developer and self-taught graphic designer based in Tbilisi, Georgia.
@@ -88,36 +93,36 @@
 
     <div id="skills" class="divider"></div>
 
-    <section  class="skills">
+    <section data-aos="fade-up" style="transition: 2s;"  class="skills">
         <h1>skills</h1>
         <div class="skills-1">
         <div class="both" class="code">
 
             <li>
-                <h3>HTML 5</h3><span class="bar"><span class="html"></span></span>
+                <h3>HTML 5</h3><span class="bar"><span data-aos="fade-right" style="transition: 1s;" class="html"></span></span>
             </li>
 
             <li>
-                <h3>CSS 3</h3><span class="bar"><span class="css"></span></span>
+                <h3>CSS 3</h3><span class="bar"><span data-aos="fade-right" style="transition: 1s;" class="css"></span></span>
             </li>
 
             <li>
-                <h3>JavaScript</h3><span class="bar"><span class="JavaScript"></span></span>
+                <h3>JavaScript</h3><span class="bar"><span data-aos="fade-right" style="transition: 1s;" class="JavaScript"></span></span>
             </li>
 
         </div>
 
         <div class="both" class="cg">
             <li>
-                <h3>adobe illustrator</h3><span class="bar"><span class="ai"></span></span>
+                <h3>adobe illustrator</h3><span class="bar"><span data-aos="fade-right" style="transition: 1s;" class="ai"></span></span>
             </li>
 
             <li>
-                <h3>adobe photoshop</h3><span class="bar"><span class="ps"></span></span>
+                <h3>adobe photoshop</h3><span class="bar"><span data-aos="fade-right" style="transition: 1s;" class="ps"></span></span>
             </li>
 
             <li>
-                <h3>adobe animate</h3><span class="bar"><span class="ae"></span></span>
+                <h3>adobe animate</h3><span class="bar"><span data-aos="fade-right" style="transition: 1s;" class="ae"></span></span>
             </li>
         </div>
         </div>
@@ -126,11 +131,11 @@
     <!-- experience -->
 
     <div id="experience" class="divider"></div>
-    <section  class="xp">
+    <section data-aos="fade-up" style="transition: 2s;" class="xp">
         <div>
             <h1>experience</h1>
             <p class="error">error</p>
-            <p class="number">404</p>
+            <p data-aos="zoom-in" style="transition: 3s;" class="number">404</p>
             <p class="exp">XP not found</p>
         </div>
     </section>
@@ -138,61 +143,76 @@
     <!-- contact -->
 
     <div id="contact" class="divider"></div>
-    <div  class="contact">
-        <h1>contact</h1>
-    </div>
-    <section class="forms">
-    
-       <div class="contact-wraper">
-            <div class="form-wraper">
-                <div class="firstline-form">
-                    <div class="form-box">
-                        <label for="email"></label>
-                        <input class="email" type="email" name="email" id="email" placeholder="type your email..." required>
+     <section data-aos="fade-up" style="transition: 2s;" >
+        <div class="contact">
+            <h1>contact</h1>
+        </div>
+        <section class="forms">
+        
+           <div class="contact-wraper">
+                <div class="form-wraper">
+                    <div class="firstline-form">
+                        <div class="form-box">
+                            <label for="email"></label>
+                            <input class="email" type="email" name="email" id="email" placeholder="type your email..." required>
+                        </div>
+        
+                        <div class="form-box">
+                            <button class="send-button">
+                                <img class="send-icon" src="img/send.svg" alt="send">
+                            </button>
+                        </div>
+        
                     </div>
-    
-                    <div class="form-box">
-                        <button class="send-button">
-                            <img class="send-icon" src="img/send.svg" alt="send">
-                        </button>
+        
+                    <div>
+                        <label for="message"></label>
+                        <textarea name="message"  id="message" placeholder="text..."></textarea>
                     </div>
+                </div>
+                <div class="info-incontact">
     
-                </div>
-    
-                <div>
-                    <label for="message"></label>
-                    <textarea name="message"  id="message" placeholder="text..."></textarea>
-                </div>
-            </div>
-            <div class="info-incontact">
-
-                <div class="mail">
-                   <h6>Phone</h6>
-                   <a class="callto" href="callto:+995598008501">+995 598 008 501</a>
-                </div>
-                <div class="footer-divider"></div>
-                <div class="mail">
-                   <h6>E-mail</h6>
-                   <a class="mailto" href="mailto:ninokhutsiberidze16b@geolab.edu.ge">ninokhutsiberidze16b@geolab.edu.ge</a>
-                </div>
+                    <div data-aos="fade-right" style="transition: 2s;" class="mail">
+                       <h6>Phone</h6>
+                       <a class="callto" href="callto:+995598008501">+995 598 008 501</a>
+                    </div>
+                    
+                    <div data-aos="fade-left" style="transition: 2s;" class="mail">
+                       <h6>E-mail</h6>
+                       <a class="mailto" href="mailto:ninokhutsiberidze16b@geolab.edu.ge">ninokhutsiberidze16b@geolab.edu.ge</a>
+                    </div>
+               </div>
            </div>
-       </div>
-
+    
+        </section>
+     </section>
+    <div class="divider"></div>
+    <section data-aos="fade-up" style="transition: 2s;" class="projects">
+        
+        <p>check out my projects</p>
+        <div data-aos="zoom-in" style="transition: 2s;">
+            <button  class="project-button">
+                <a href="https://ninokhutsi.github.io/sass-study/" target="_blank">LINK HERE</a>
+            </button>
+        </div>
     </section>
     <div class="divider"></div>
-    <footer>
-        <div class="info">
+    <div class="info">
 
-             <div class="mail">
-                <h6>Phone</h6>
-                <a class="callto" href="callto:+995598008501">+995 598 008 501</a>
-             </div>
-             
-             <div class="mail">
-                <h6>E-mail</h6>
-                <a class="mailto" href="mailto:ninokhutsiberidze16b@geolab.edu.ge">ninokhutsiberidze16b@geolab.edu.ge</a>
-             </div>
+        <div data-aos="fade-right" style="transition: 2s;" class="mail">
+           <h6>Phone</h6>
+           <a class="callto" href="callto:+995598008501">+995 598 008 501</a>
         </div>
+        
+        <div data-aos="fade-left" style="transition: 2s;" class="mail">
+           <h6>E-mail</h6>
+           <a class="mailto" href="mailto:ninokhutsiberidze16b@geolab.edu.ge">ninokhutsiberidze16b@geolab.edu.ge</a>
+        </div>
+   </div>
+
+
+    <footer>
+        
         
         <a class="smoothScroll" href="#mainpage">
             <div class="scroll-up">
@@ -222,10 +242,16 @@
 
 
     
+
     <script
          src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
     </script>
     <script src="./main.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

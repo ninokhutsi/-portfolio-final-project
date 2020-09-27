@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 6 version
+*/
+
 body{
     padding: 0;
     background-color: black;
@@ -23,8 +30,13 @@ header{
 }
 .scroll-up{
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .scroll-up img{
     width: 50px;
@@ -65,28 +77,40 @@ header{
 
 }
 .main-page .name p:first-child{
-    animation-name: nino;
-    animation-duration: 1s;
+    -webkit-animation-name: nino;
+            animation-name: nino;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 
 }
+@-webkit-keyframes nino{
+    from{-webkit-transform: translateX(-500px);transform: translateX(-500px);}
+    to{-webkit-transform: translateX(0);transform: translateX(0);}
+}
 @keyframes nino{
-    from{transform: translateX(-500px);}
-    to{transform: translateX(0);}
+    from{-webkit-transform: translateX(-500px);transform: translateX(-500px);}
+    to{-webkit-transform: translateX(0);transform: translateX(0);}
 }
 
 .main-page .name p:nth-child(2){
-    animation-name: khutso;
-    animation-duration: 1s;
+    -webkit-animation-name: khutso;
+            animation-name: khutso;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+@-webkit-keyframes khutso{
+    from{-webkit-transform: translateX(400px);transform: translateX(400px);}
+    to{-webkit-transform: translateX(0);transform: translateX(0);}
 }
 @keyframes khutso{
-    from{transform: translateX(400px);}
-    to{transform: translateX(0);}
+    from{-webkit-transform: translateX(400px);transform: translateX(400px);}
+    to{-webkit-transform: translateX(0);transform: translateX(0);}
 }
 
 .button-wraper{
     text-align: center;
 }
-.button{
+.project-button{
     margin-top: 30px;
     background-color:#D70028;
     border: none;
@@ -94,10 +118,21 @@ header{
     border-radius: 20px;
     width: 200px;
     height: 50px;
-    transition-property: all;
-    transition-delay: 0.2s;
+   
+    cursor: pointer;
 }
-.button:focus{
+.project-button a{
+    color: rgb(255, 255, 255);
+    padding: 2%;
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+
+}
+.project-button:hover{
+    opacity: 0.7;
+}
+.button{
     margin-top: 25px;
     margin-bottom: 5px;
     background-color:#D70028;
@@ -106,6 +141,10 @@ header{
     border-radius: 20px;
     width: 200px;
     height: 50px;
+    cursor: pointer;
+}
+.button:hover{
+  opacity: 0.7;
 }
 .button p{
     font-family: 'Fira Sans', sans-serif;
@@ -127,6 +166,35 @@ header{
     margin-top: 100px;
     margin-bottom: 100px;
 }
+/* projects */
+.projects{
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.projects p{
+
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 27px;
+    width: 270px;
+    color:  rgba(255, 255, 255, 0.459);
+}
+
 
 /* about */
 .about div h1{
@@ -236,14 +304,14 @@ header{
     color: #D70028;
     margin-top: 30px;
     margin-bottom: 30px;
-    animation-name: number;
-    animation-duration: 5s;
-    animation-iteration-count:infinite;
+    -webkit-animation-name: number;
+            animation-name: number;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
 }
-@keyframes number{
-    from{transform: translateX(-200px);}
-    to{transform: translateX(200px);}
-}
+ 
 .error{
     font-size: 40px;
 }
@@ -256,9 +324,16 @@ header{
 .forms{
     width:300px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .submit{
     display: none;
@@ -278,7 +353,8 @@ header{
     padding-left: 7px;
 }
 textarea{
-    text-decoration-color: white;
+    -webkit-text-decoration-color: white;
+            text-decoration-color: white;
     resize: none;
     border: none;
     width: 300px;
@@ -295,9 +371,18 @@ textarea{
 }
 .firstline-form{
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 .send-button{
     background-color:#D70028;
@@ -340,9 +425,16 @@ h1{
     margin-top: -10px;
     height: 150px;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 100px;
 }
 .info h6{
@@ -370,9 +462,15 @@ h1{
     width: 100%;
     height: 80px;
     background-color:#ffffff2a ;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     text-align: center;
     vertical-align: middle;
 }
@@ -431,15 +529,26 @@ h1{
         padding: 0;
         position: relative;
     }
+
+    
     .main-icons{
         position: relative;
         left: 95%;
         top: 40%;
         height: 200px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         position: fixed;
     }
     .main-icons img{
@@ -459,14 +568,22 @@ h1{
         width: 100%;
         position: fixed;
         padding-bottom: 50px;
+        z-index: 9999;
     }
     .nav-links{
         width: 60%;
     }
     .header nav ul{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
     }
     .header nav ul li a{
         color: white;
@@ -481,9 +598,15 @@ h1{
     }
     .main {
         padding: 5%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
-        flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     .name p{
         font-size: 150px;
@@ -494,38 +617,31 @@ h1{
         text-align: left;
         
         
-        animation-name: hireme;
-        animation-duration: 2.5s;
+        -webkit-animation-name: hireme;
+        
+        
+                animation-name: hireme;
+        -webkit-animation-duration: 2.5s;
+                animation-duration: 2.5s;
     }
-    @keyframes hireme{
-        from{transform: translateX(-500px);}
-        to{transform: translateX(0px);}
-    }
+    
     .photo img{
         width: 300px;
-        animation-name: photo;
-        animation-duration: 3s;
     }
-    @keyframes photo{
-        from{transform: translateX(500px);}
-        to{transform: translateX(0);}
-    }
+    
     .name {
-        animation-name: name;
-        animation-duration: 3s;
+        -webkit-animation-name: name;
+                animation-name: name;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s;
     }
-    @keyframes name{
-        from{transform: translateX(-300px);}
-        to{transform: translateX(0px);}
-    }
-    @keyframes khutso{
-        from{transform: translateX(-700px);}
-        to{transform: translateX(0);}
-    }
+  
 
     /* about */
-
-    
+  
+    .about{
+        height: 100vh;
+    }
     .about div p{
         width: 70%;
     }
@@ -534,9 +650,15 @@ h1{
 
    
     .skills-1{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
-        flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     .both{
         width: 400px;
@@ -575,7 +697,9 @@ h1{
     width: 300px;
 }
 .form-wraper{
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 textarea{
     
@@ -605,9 +729,17 @@ textarea{
 }
 .contact-wraper{
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     
 }
 h1{
@@ -623,8 +755,13 @@ h1{
 .info-incontact{
     margin-top: -10px;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .info-incontact h6{
     font-family: 'Fira Sans', sans-serif;
@@ -634,9 +771,15 @@ h1{
 }
 .info-incontact{
     height: 380px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .info-incontact a{
     font-family: 'Fira Sans', sans-serif;
@@ -656,8 +799,14 @@ h1{
     
     
     .mail{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
-        flex-direction: column;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
